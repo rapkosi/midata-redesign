@@ -19,8 +19,9 @@ body {
   left: 1rem;
   margin: 0;
   padding: 0.5rem;
+  //padding-top: 0;
   z-index: 100;
-  // for a box around the logo, 
+  // for a box around the logo,
   // if the Logo cannot be direclty on the page background:
   @if ($logoBackgroundColor != none) {
       padding: 10px;
@@ -39,7 +40,9 @@ body {
 
   background: image-url($logoUrl) transparent no-repeat;
   width: $logoWidth;
-  height: $logoHeight;
+  //height: $logoHeight;
+  height: 98px;
+  top: -40px;
   background-size: contain;
   background-position: center center;
 }
@@ -78,7 +81,7 @@ body {
     width: 30%;
     max-width: 25rem;
     z-index: 1;
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   .container-fluid {
@@ -101,17 +104,19 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  margin-top: 1rem;
 
   .toggle-nav {
     margin: -0.5rem 1rem -0.5rem 0rem;
     padding: 0.5rem;
     text-transform: uppercase;
     i {
-      margin-top: 0.2rem;
-      margin-right: 0.5rem; 
+      margin-top: 0;
+      margin-right: 0.5rem;
+      text-decoration: none !important;
     }
-    a:hover i {
+    a:hover > i {
       text-decoration: none;
     }
   }
@@ -250,7 +255,7 @@ body {
       &.is-visible {
         left: 0;
         width: 90%;
-      } 
+      }
     }
 
     .nav-left-overlay {

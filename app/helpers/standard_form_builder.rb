@@ -285,7 +285,7 @@ class StandardFormBuilder < ActionView::Helpers::FormBuilder
     caption_or_content ||= captionize(attr, klass)
     add_css_class(html_options, 'controls')
 
-    content_tag(:div, class: "control-group#{' error' if errors_on?(attr)}") do
+    content_tag(:div, class: "control-group#{' error' if errors_on?(attr)}#{' required' if required?(attr)}") do
       label(attr, caption_or_content, class: 'control-label') +
       content_tag(:div, content, html_options)
     end
@@ -437,7 +437,7 @@ class StandardFormBuilder < ActionView::Helpers::FormBuilder
     labeled_args = [args.first]
     labeled_args << label if label.present?
 
-    text = send(field_method, *(args << options)) + required_mark(args.first)
+    text = send(field_method, *(args << options)) #+ required_mark(args.first)
     text = with_addon(addon, text) if addon.present?
     text << help_inline(help_inline) if help_inline.present?
     text << help_block(help) if help.present?

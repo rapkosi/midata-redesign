@@ -18,7 +18,7 @@ $logoHeight:            30px;       // will also set the minimal width of the na
                                     // must be set in pixel
 
 // optional backgroundcolor, creates a box around the logo, if changed from 'none'
-$logoBackgroundColor:   none;    
+$logoBackgroundColor:   none;
 
 // Grays
 // -------------------------
@@ -32,9 +32,11 @@ $white:                 #fff !default;
 
 // Colors
 // ----------------------------
-$blue:                  #329897 !default;
+$blue:                  #329897 !default; //329897 //C25D51
 $blueDark:              darken($blue, 10%) !default;
-$green:                 #8DB850 !default;
+$aqua:                  #50b8af !default;
+$aquaDark:              darken($aqua, 10%) !default;
+$green:                 #8DB850 !default; //8DB850 //FF9282
 $greenDark:             darken($green, 10%) !default;
 
 $orange:                #DC795B;
@@ -47,13 +49,13 @@ $red:                   $orange !default;
 $textColor:             $black !default;
 $borderColor:           $grayLight !default;
 
-$pageBackground:        lighten($green, 5%);
+$pageBackground:        lighten($aqua, 5%);
 $contentBackground:     $grayLight;
 $footerBackground:      $blue;
 $bodyBackground:        $blue;
 
 $focusColor:            $purple;
-$shadowColor:           darken($pageBackground, 10%);
+$shadowColor:           rgba(darken($black, 10%), 0.3); //$pageBackground
 $linkColor:             $blue !default;
 $linkColorHover:        $purpleDark !default;
 
@@ -61,6 +63,11 @@ $footerColor:           $white;
 $footerColorHover:      $white;
 
 $tableColorHover:       lighten($purple, 50%);
+
+$warning:               #e7c521;
+$danger:                $red;
+$success:               $green;
+$info:                  $blue;
 
 // Typography
 // -------------------------

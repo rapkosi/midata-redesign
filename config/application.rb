@@ -92,6 +92,8 @@ module Hitobito
     config.assets.precompile += %w(print.css ie.css ie7.css wysiwyg.css wysiwyg.js
                                    *.png *.gif *.jpg favicon.ico)
 
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+
     config.generators do |g|
       g.test_framework :rspec, fixture: true
     end
